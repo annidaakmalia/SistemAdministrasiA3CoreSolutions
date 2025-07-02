@@ -1,0 +1,194 @@
+/* style.css */
+
+body {
+    background-color: #cccccc;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Ubah dari 20px agar flexbox bisa mengambil tinggi penuh */
+    color: #333;
+    display: flex; /* Menggunakan flexbox untuk memusatkan konten */
+    justify-content: center; /* Pusatkan horizontal */
+    align-items: center; /* Pusatkan vertikal */
+    min-height: 100vh; /* Pastikan mengambil tinggi viewport penuh */
+}
+
+h1 { /* Ini adalah styling untuk semua h1, termasuk yang di dashboard dan login */
+    text-align: center;
+    color: #0056b3;
+}
+
+form {
+    margin: 20px auto; /* Memberi margin atas/bawah dan tengah otomatis */
+    padding: 20px;
+    background-color: #ffffff; /* Latar belakang form putih */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sedikit bayangan */
+    max-width: 600px; /* Batasi lebar form */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"], /* Tambahkan ini */
+select,
+textarea { /* Tambahkan textarea jika akan ada input alamat yang lebih panjang */
+    width: calc(100% - 22px); /* Mengisi lebar kontainer dikurangi padding dan border */
+    margin: 10px 0; /* Margin atas bawah */
+    padding: 10px;
+    font-size: 16px; /* Ukuran font lebih besar */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Agar padding dan border tidak menambah lebar */
+}
+
+button {
+    padding: 12px 25px; /* Padding lebih besar */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Menunjukkan bahwa itu bisa diklik */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block; /* Agar tombol mengambil lebar penuh */
+    margin: 20px auto 0 auto; /* Tengah secara horizontal, margin atas */
+}
+
+button:hover {
+    background-color: #218838; /* Warna hover yang lebih gelap */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Warna border tabel yang lebih lembut */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; /* Latar belakang header tabel */
+    font-weight: bold;
+}
+
+tr:nth-child(even) { /* Warna latar baris genap */
+    background-color: #f9f9f9;
+}
+
+.action-buttons a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    text-decoration: none;
+    border-radius: 3px;
+    color: white;
+}
+
+.action-buttons .edit-btn {
+    background-color: #007bff; /* Biru untuk edit */
+}
+
+.action-buttons .edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.action-buttons .delete-btn {
+    background-color: #dc3545; /* Merah untuk delete */
+}
+
+.action-buttons .delete-btn:hover {
+    background-color: #bd2130;
+}
+
+.add-button-container {
+    text-align: right; /* Tombol "Tambah Karyawan" di kanan */
+    margin-bottom: 20px;
+    max-width: 600px; /* Sesuaikan dengan lebar form */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling Khusus untuk Halaman Login */
+/* Login container tidak perlu display:flex lagi karena sudah di body */
+/* .login-container { } */ 
+
+.login-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.login-box h2 { /* Ini untuk judul "A3 Core Solutions" */
+    margin-bottom: 30px;
+    color: #0056b3;
+}
+
+/* Styling untuk nama perusahaan di dalam kotak login */
+.company-name {
+    font-size: 2em; /* Ukuran font lebih besar */
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    /* Hilangkan display: block dan margin: auto yang sudah ada di button umum */
+}
+
+.login-box button:hover {
+    background-color: #0056b3;
+}
+
+.alert-message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
