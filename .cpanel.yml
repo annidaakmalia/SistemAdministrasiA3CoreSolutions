@@ -1,0 +1,19 @@
+    ---
+    deployment:
+      tasks:
+        - export DEPLOYPATH=/home/u356560508/public_html/
+        - /bin/cp index.php $DEPLOYPATH 
+        - /bin/cp style.css $DEPLOYPATH
+        - /bin/cp create_karyawan.php  $DEPLOYPATH
+        - /bin/cp transaksi.php $DEPLOYPATH
+        - /bin/cp dashboard.php $DEPLOYPATH
+        - /bin/cp manajemen_pelanggan.php $DEPLOYPATH
+        - /bin/cp data_karyawan.php $DEPLOYPATH
+        - /bin/cp delete_karyawan.php $DEPLOYPATH
+        - /bin/cp edit_karyawan.php $DEPLOYPATH
+        - /bin/cp input_karyawan.php $DEPLOYPATH
+        - /bin/cp generate_password_hash.php $DEPLOYPATH
+        - /bin/cp manajemen_produk.php $DEPLOYPATH
+        - /bin/cp koneksi.php $DEPLOYPATH 
+        - /bin/cp logout.php $DEPLOYPATH
+        - /bin/cp register.php $DEPLOYPATH
